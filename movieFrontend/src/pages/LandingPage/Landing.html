@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEMATCH</title>
+    
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Apply Poppins font */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('https://i.pinimg.com/736x/ed/54/ea/ed54ea999d3d6d47e4c84dfee674813b.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+        }
+
+        /* Dark overlay */
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(144, 0, 255, 0.4));
+            z-index: 1;
+        }
+
+        /* Content box */
+        .content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 600px;
+        }
+
+        /* Logo */
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        /* Description text */
+        .description {
+            font-size: 18px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Highlighted CINEMATCH text */
+        .highlight {
+            background: white;
+            color: #7b2141;
+            padding: 2px 6px;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+
+        /* Swipe Match Watch button */
+        .cta-btn {
+            background: white;
+            color: #7b2141;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <!-- Content -->
+    <div class="content">
+        <img src="C:\Users\aishw\Downloads\logo.png" alt="CINEMATCH Logo" class="logo"> <!-- Adjust logo path -->
+
+        <p class="description">
+            Endless scrolling? Not anymore! Meet <span class="highlight">CINEMATCH</span>—your AI-powered movie matchmaker.
+            Whether you're watching solo or picking a film with friends, just swipe to find the perfect movie tailored to your taste.
+        </p>
+
+        <button class="cta-btn">Swipe. Match. Watch!</button>
+    </div>
+</body>
+</html>
