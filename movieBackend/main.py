@@ -1,8 +1,9 @@
 from flask import Flask, jsonify, request
 from recommendations import recommend_movies
+import auth
 
 # Initialize Flask app
-app = Flask(__name__)
+app = Flask(_name_)
 
 @app.route('/')
 def home():
@@ -10,19 +11,10 @@ def home():
 
 @app.route('/recommend', methods=['GET'])
 def get_recommendations():
-    """
-    API Endpoint: /recommend
-    - Expects 'user_id' as a query parameter.
-    - Returns a list of recommended movies.
-
-    Example Request: GET /recommend?user_id=some_user_456
-    """
     user_id = request.args.get("user_id")
-
     if not user_id:
         return jsonify({"error": "Missing user_id parameter"}), 400
 
-    # Get movie recommendations
     recommended_movies = recommend_movies(user_id)
 
     if not recommended_movies:
@@ -30,6 +22,24 @@ def get_recommendations():
 
     return jsonify({"user_id": user_id, "recommendations": recommended_movies})
 
-# Run Flask app
-if __name__ == "__main__":
-    app.run(debug=True)  # Set debug=False in production
+# Register API
+@app.route('/register', methods=['POST'])
+def register():
+    data = request.json
+    return auth.register_user(data)
+
+# Login API
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.json
+    return auth.login_user(data)
+
+# Swipe API
+@app.route('/swipe', methods=['POST'])
+def swipe():
+    data = request.json
+    user_id = data.get('user_id')
+    return auth.save_swipe(user_id, data)
+
+if _name_ == "_main_":
+    app.run(debug=True)
