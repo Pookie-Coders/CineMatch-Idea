@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: url('https://i.pinimg.com/736x/ed/54/ea/ed54ea999d3d6d47e4c84dfee674813b.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="h-screen flex items-center justify-center relative">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    
+    <div class="relative flex items-center space-x-8">
+        <!-- Image to the left of login frame -->
+        <img src="C:\Users\aishw\Downloads\WhatsApp_Image_2025-03-23_at_01.04.14-removebg-preview.png" alt="Movie Icon" class="w-120 h-120 object-contain"> <!-- Adjust the path and size as needed -->
+        
+        <div class="bg-black bg-opacity-50 p-8 rounded-lg w-96 text-white ml-40"> <!-- Increased margin-left -->
+            <h2 class="text-center text-2xl font-bold">Login</h2>
+            <p class="text-center text-sm mt-2">Don't have an account yet? <a href="#" class="text-blue-400">Sign Up</a></p>
+            
+            <form class="mt-4">
+                <div class="mb-4">
+                    <label class="block text-sm mb-1">Username or Email</label>
+                    <input type="text" class="w-full p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-blue-400">
+                </div>
+                
+                <div class="mb-4">
+                    <label class="block text-sm mb-1">Password</label>
+                    <input type="password" class="w-full p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-blue-400">
+                </div>
+                
+                <div class="flex items-center justify-between text-sm">
+                    <label class="flex items-center">
+                        <input type="checkbox" class="mr-2"> Keep me logged in
+                    </label>
+                    <a href="#" class="text-blue-400">Forgot Password</a>
+                </div>
+                
+                <button class="w-full mt-4 p-2 bg-pink-600 rounded text-white font-bold hover:bg-pink-700">LOGIN</button>
+                <button class="w-full mt-2 p-2 bg-teal-600 rounded text-white font-bold hover:bg-teal-700">LOGIN AS A GUEST</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
