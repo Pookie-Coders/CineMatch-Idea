@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join a Room</title>
+    <style>
+        /* Background styling */
+        body {
+            background: url('https://i.pinimg.com/736x/ed/54/ea/ed54ea999d3d6d47e4c84dfee674813b.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            position: relative;
+        }
+
+        /* 50% opaque dark overlay */
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5); /* 50% opacity */
+            z-index: 1;
+        }
+
+        /* Main container */
+        .login-container {
+            position: relative;
+            background: linear-gradient(to right, #082032, #240046);
+            padding: 30px;
+            border-radius: 8px;
+            width: 400px;
+            margin-right: 5%;
+            color: white;
+            z-index: 2; /* Keep above overlay */
+        }
+
+        /* Input fields */
+        .input-box {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: transparent;
+            color: white;
+            font-style: italic;
+        }
+
+        /* Buttons */
+        .join-btn {
+            width: 100%;
+            padding: 12px;
+            background: #7b2141;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .join-btn:hover {
+            background: #a02d58;
+        }
+
+        /* Help text */
+        .help-text {
+            text-align: right;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        .help-text a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .help-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* Logo */
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <!-- Join Room Form -->
+    <div class="login-container">
+        <img src="C:\Users\aishw\Downloads\logo.png" alt="Cinematch Logo" class="logo">  <!-- Adjust logo path -->
+
+        <button class="join-btn" style="background: linear-gradient(to right, #082032, #4b1557); font-size: 18px;">
+            JOIN A ROOM
+        </button>
+
+        <p style="margin-top: 20px;">Enter the below details</p>
+
+        <input type="text" class="input-box" placeholder="ID link">
+        <input type="text" class="input-box" placeholder="Name">
+
+        <button class="join-btn">JOIN</button>
+
+        <p class="help-text"><a href="#">Need Help?</a></p>
+    </div>
+</body>
+</html>
