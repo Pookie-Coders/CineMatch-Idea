@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEMATCH - Movie Magic</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('https://i.pinimg.com/736x/ed/54/ea/ed54ea999d3d6d47e4c84dfee674813b.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Background Overlay - More Opaque */
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75); /* Increased opacity from 0.6 to 0.75 */
+            z-index: 1;
+        }
+
+        /* Main Content */
+        .content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+        }
+
+        /* Logo */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 80px;
+        }
+
+        /* Movie Illustration - Bigger Size */
+        .movie-illustration {
+            width: 300px; /* Increased size */
+            margin-bottom: 20px;
+        }
+
+        /* Header Text */
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Swipe Away Button */
+        .swipe-btn {
+            background: white;
+            color: #7b2141;
+            font-weight: bold;
+            font-size: 22px;
+            padding: 15px 30px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .swipe-btn:hover {
+            background: #f8d7da;
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <!-- Logo -->
+    <img src="C:\Users\aishw\Downloads\logo.png" alt="CINEMATCH Logo" class="logo"> 
+
+    <!-- Main Content -->
+    <div class="content">
+        <img src="C:\Users\aishw\Downloads\popcorn-removebg-preview.png" alt="Movie Magic" class="movie-illustration">
+        
+        <h1>Let the movie magic begin!</h1>
+
+        <!-- Swipe Away Button -->
+        <button class="swipe-btn" onclick="goToNextPage()">Swipe Away!</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function goToNextPage() {
+            window.location.href = "next-page.html"; // Update with the actual next page
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Info</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('https://i.pinimg.com/736x/ed/54/ea/ed54ea999d3d6d47e4c84dfee674813b.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Overlay for better readability */
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            z-index: 1;
+        }
+
+        /* Main Container */
+        .movie-container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: 800px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Left Section: Movie Poster */
+        .movie-poster {
+            background-color: #012b45;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .movie-poster img {
+            width: 250px;
+            border-radius: 10px;
+        }
+
+        /* Right Section: Movie Info */
+        .movie-info {
+            padding: 20px;
+            color: #003366;
+        }
+
+        .movie-info h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .movie-info p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .info-title {
+            font-weight: bold;
+            color: #7b2141;
+        }
+
+        /* Room and User Name Bars */
+        .top-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .room-name {
+            background: linear-gradient(to right, #1f3c88, #6b2e8d);
+            padding: 10px 20px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        .user-name {
+            background: linear-gradient(to right, #6b2e8d, #1f3c88);
+            padding: 10px 20px;
+            border-radius: 0 10px 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="top-bar">
+        <div class="room-name">ROOM NAME</div>
+        <div class="user-name">USER NAME</div>
+    </div>
+
+    <div class="movie-container">
+        <!-- Movie Poster -->
+        <div class="movie-poster">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9olYpM_ZRquHs0IlwJAK4IKoIdIUHZge1lQ&s" alt="Moana Poster">
+        </div>
+
+        <!-- Movie Info -->
+        <div class="movie-info">
+            <h1>MOANA</h1>
+            <p><span class="info-title">2016</span> | FANTASY · ADVENTURE</p>
+            <p><span class="info-title">DURATION:</span> 107 Minutes</p>
+            <p><span class="info-title">DIRECTION:</span> Ron Clements, John Musker</p>
+            <p><span class="info-title">PRODUCTION STUDIO:</span> Walt Disney Animation Studios</p>
+            <p><span class="info-title">MAIN STARRING ACTORS:</span> Auli'i Cravalho, Dwayne Johnson</p>
+        </div>
+    </div>
+
+</body>
+</html>
